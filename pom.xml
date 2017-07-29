@@ -29,12 +29,22 @@
 								<tags><tag>latest</tag></tags>
 
 								<entryPoint>
-								  <shell>java -cp /opt/out/*.jar SimpleApp</shell>
+									<shell>java -cp /opt/out/*.jar SimpleApp</shell>
 								</entryPoint>
 								<assembly>
 									<mode>dir</mode>
 									<targetDir>/opt/out</targetDir>
-									<descriptor>assembly.xml</descriptor>
+									<inline>
+										<dependencySets>
+											<dependencySet>
+												<includes>
+													<include>com.vv:simple-app</include>
+												</includes>
+												<outputDirectory>.</outputDirectory>
+												<outputFileNameMapping>simpleapp.jar</outputFileNameMapping>
+											</dependencySet>
+										</dependencySets>
+									</inline>
 								</assembly>
 
 							</build>
