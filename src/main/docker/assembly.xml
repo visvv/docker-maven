@@ -1,0 +1,9 @@
+<assembly>
+	<dependencySets>
+		<dependencySet>
+			<includes>
+				<include>com.vv:simple-app</include>
+			</includes>
+		</dependencySet>
+	</dependencySets>
+</assembly>
